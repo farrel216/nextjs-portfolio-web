@@ -7,7 +7,7 @@ const MotionLink = motion(Link);
 
 const Logo = () => {
   return (
-    <div className='flex items-center justify-center mx-20'>
+    <div className='flex items-center justify-center'>
         <MotionLink href='/'
         className='font-bold text-4xl bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent'
         whileHover={{scale:1.5}}

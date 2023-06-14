@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React from "react";
 import foto from "../../public/images/profile/foto_profil.png";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import {
   AiFillLinkedin,
   AiFillGithub,
   AiFillInstagram,
-  AiOutlineDownload,
 } from "react-icons/ai";
 import Link from "next/link";
 import { BsBoxArrowUpRight } from "react-icons/bs";
@@ -16,12 +15,12 @@ const MotionLink = motion(Link);
 
 const Hero = () => {
   return (
-    <div class="container">
+    <div className="container pb-10">
       <div className="flex flex-wrap">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.1 }}
           className="w-full self-start px-4 lg:w-1/2"
         >
           <div className="relative">
@@ -46,14 +45,14 @@ const Hero = () => {
           </span>
           </div>
         </motion.div>
-        <div className="w-full self-center px-4 mt-6 md:px-10 lg:w-1/2 lg:mt-0 lg:right-0">
+        <div className="w-full self-center text-center px-4 mt-6 md:px-10 lg:w-1/2 lg:mt-0 lg:right-0 lg:text-left">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.1 }}
             className="text-lg text-black lg:text-2xl"
           >
-            Hello, <span>My Name is </span>
+            Hello, <span>I&apos;m</span>
             <span className="block mt-2 text-4xl font-black lg:text-5xl 2xl:text-6xl">
               Farrel Andhika
             </span>
@@ -61,7 +60,7 @@ const Hero = () => {
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.2 }}
             className="text-md py-5 text-slate-500 lg:text-lg 2xl:text-xl"
           >
             3rd Year Informatics Students at Diponegoro University
@@ -69,7 +68,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.2 }}
             className="mt-2 text-md text-slate-700 lg:text-lg 2xl:text-xl"
           >
             Based on Depok, West Java
@@ -83,7 +82,7 @@ const Hero = () => {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0}}
               animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1.3 }}
               href="https://linkedin.com/in/farrelarp"
               target="_blank"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:bg-slate-600 hover:text-white"
@@ -95,7 +94,7 @@ const Hero = () => {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0}}
               animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1.3 }}
               href="https://instagram.com/farrel_arp"
               target="_blank"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:bg-slate-600 hover:text-white"
@@ -107,7 +106,7 @@ const Hero = () => {
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0, scale: 0}}
               animate={{ opacity: 1, scale: 1}}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1.3 }}
               href="https://github.com/farrel216"
               target="_blank"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:bg-slate-600 hover:text-white"
@@ -124,7 +123,8 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0}}
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}}
-              href="/resume.pdf"
+              href="#"
+              target="_blank"
               className="bg-slate-600 border text-light p-2 pl-5 pr-2 text-lg font-semibold rounded-lg flex items-center hover:bg-light hover:text-slate-600 hover:border-slate-600 hover:shadow-lg transition duration-300 ease-in-out"
             >
               Resume <BsBoxArrowUpRight className="ml-2 w-9" />
