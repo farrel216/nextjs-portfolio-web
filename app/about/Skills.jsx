@@ -13,6 +13,7 @@ const Skill = ({name, x, y, children}) => {
     cursor-pointer absolute"
     initial={{x:0,y:0}}
     whileInView={{x:x, y:y}}
+    viewport={{once: true}}
     transition={{duration:1.2}}
     onMouseEnter={() => {setShowName(true)}}
     onMouseLeave={() => {setShowName(false)}}

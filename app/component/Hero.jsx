@@ -11,7 +11,6 @@ import {
 import Link from "next/link";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
-const MotionLink = motion(Link);
 
 const Hero = () => {
   return (
@@ -119,16 +118,17 @@ const Hero = () => {
           
             className="mt-6 flex justify-center lg:justify-start"
           >
-            <MotionLink
+            <motion.a
             initial={{ opacity: 0, scale: 0}}
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}}
-              href="#"
+              href="/resume/resume.pdf"
+              download={true}
               target="_blank"
               className="bg-slate-600 border text-light p-2 pl-5 pr-2 text-lg font-semibold rounded-lg flex items-center hover:bg-light hover:text-slate-600 hover:border-slate-600 hover:shadow-lg transition duration-300 ease-in-out"
             >
               Resume <BsBoxArrowUpRight className="ml-2 w-9" />
-            </MotionLink>
+            </motion.a>
           </div>
         </div>
       </div>

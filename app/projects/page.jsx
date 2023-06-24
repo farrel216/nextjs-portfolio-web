@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectComponent from './ProjectComponent'
 
 export const metadata = {
     title: 'Farrel Portfolio | Projects Page',
@@ -7,7 +8,9 @@ export const metadata = {
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+      <ProjectComponent/>
+    </>
   )
 }
 

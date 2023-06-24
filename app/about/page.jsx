@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../component/About'
+import Experience from './Experience'
 import Skills from './Skills'
 import PageTransition from '../component/PageTransition'
 export const metadata = {
@@ -14,6 +15,7 @@ const AboutPage = () => {
     <div className='px-10'>
     <About/>
     <Skills/>
+    <Experience/>
     </div>
     </>
   )

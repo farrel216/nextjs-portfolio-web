@@ -3,8 +3,8 @@ import "./globals.css";
 import { Merriweather, Roboto_Mono } from "next/font/google";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
-import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+import React, { useRef } from "react";
 // const poppins = Poppins({
 //   subsets: ['latin'],
 //   variable: '--font-poppins',
@@ -25,8 +25,16 @@ const roboto = Roboto_Mono({
 });
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const mainContent = useRef(null)
+
+  React.useEffect(()=>{
+    if(mainContent.current){
+      mainContent.current.scrollTop = 0;
+    }
+  }, [pathname])
   return (
-    <html lang="en" className={`${merriweather.variable} font-merriweather`}>
+    <html ref={mainContent} lang="en" className={`${merriweather.variable} font-merriweather`}>
       <body className={`bg-light text-dark w-full `}>
         <header>
           <Navigation />
