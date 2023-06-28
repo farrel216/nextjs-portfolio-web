@@ -1,7 +1,7 @@
 import Hero from './component/Hero'
 import About from './component/About'
 import PageTransition from './component/PageTransition'
-import ProjectComponent from './projects/ProjectComponent'
+import Project from './component/Project'
 
 
 export const metadata = {
@@ -21,7 +21,7 @@ export default function Home() {
           <About/>
       </section>
       <section>
-        <ProjectComponent/>
+        <Project/>
       </section>
     </>
   )

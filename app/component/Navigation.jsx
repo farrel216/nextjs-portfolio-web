@@ -13,7 +13,7 @@ const MobileLink = ({ href, title, className, toggle }) => {
     <button type="button" onClick={()=>{
       toggle()
       router.push(href)
-      }} href={href} className={`${className} relative group`}>
+      }} href={href} className={`${className} block relative group`}>
       {title}
       <span
         className={`h-0.5 inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
@@ -40,9 +40,8 @@ const CustomLink = ({ href, title, className }) => {
     </Link>
   );
 };
-const Navigation = () => {
+const Navigation = ({darkMode, setDarkMode}) => {
   const [open, setOpen] = React.useState(false);
-
   const handleClick = () => {
     setOpen(!open);
   };
@@ -75,8 +74,8 @@ const Navigation = () => {
         ></span>
       </button>
       {open ? 
-      <div className="min-w-[70vw] text-light bg-dark/80 rounded-lg backdrop-blur-md py-36 flex flex-col justify-between items-center fixed z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:hidden">
-        <nav className="flex items-center flex-col justify-center">
+      <div className="min-w-[250px] text-dark bg-white shadow-lg rounded-lg backdrop-blur-md py-5 flex flex-col items-center absolute z-50 top-20 lg:hidden">
+        <nav className="flex flex-col p-5 gap-4 ">
           <MobileLink href={'/'} title="Home" className={""} toggle={handleClick}/>
           <MobileLink href={'/about'} title="About" className={""} toggle={handleClick}/>
           <MobileLink href={'/projects'} title="Projects" className={""} toggle={handleClick}/>
@@ -104,7 +103,9 @@ const Navigation = () => {
             className={"ml-10"}/>
         </nav>
       </div>
-      <BsMoonFill className="" />
+      <button onClick={setDarkMode(!darkMode)}>
+      <BsMoonFill />
+      </button>
     </motion.div>
   );
 };
