@@ -1,31 +1,38 @@
 'use client'
 import React from "react";
-import monitoring from "../../public/images/portfolio/portfolio-monitoring.png";
-import clustering from '../../public/images/portfolio/portfolio-clustering.png';
-import ecomm from '../../public/images/portfolio/portfolio-ecom.png';
 
+import { project } from "./Constant";
 import Link from "next/link";
 import Portfolio from "./Portfolio";
-import icon from './Icon'
 
 const Project = () => {
     return (
-        <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row gap-x-10">
-                <div className="flex-1 flex flex-col gap-y-12">
-                    <h2 className="font-bold text-3xl mb-2 text-primary text-center lg:text-start">PORTFOLIO</h2>
-                    <p className="font-bold text-dark text-lg mb-4">Featured Projects</p>
-                    <div className="mb-4 lg:mb-16">
-                    <Link href={"/projects"} className=" inline-block border bg-indigo-400 text-light py-2 px-5 text-lg font-semibold rounded-lg items-center hover:bg-indigo-600 hover:shadow-lg transition duration-300 ease-in-out">
-                View All Projects
-              </Link>
+        <div className='flex justify-center'>
+            <div className="container">
+                <div className="w-full px-4">
+                    <div className="max-w-xl mx-auto text-center my-16">
+                        <h2 className="font-bold text-3xl mb-2 text-dark text-center">Latest <span className='text-primary'>Project</span></h2>
+                        <div className="mb-16">
+                        </div>
                     </div>
-                        <Portfolio title={'E-Commerce Website'} img={ecomm} alt={'Website E-Commerce'} tech={[icon.express,icon.react,icon.tailwind,icon.mongodb]} github={'github.com'} demo={'monitoring.cemebsa.com'} />
                 </div>
-                <div className={'flex-1 flex flex-col gap-y-8'}>
-                        <Portfolio title={'Monitoring Sensor Website'} img={monitoring} alt={'Website Monitoring'} tech={[icon.codeigniter,
-                    icon.bootstrap,icon.mysql]} github={'github.com'} demo={'monitoring.cemebsa.com'} />
-                        <Portfolio title={'Predict Stress Level'} img={clustering} alt={'Website Clustering'} tech={[icon.flask,icon.python,icon.bootstrap]} github={'github.com'}/>
+                <div className="w-full px-4 flex flex-wrap justify-center">
+                    <div className="w-full p-4 lg:w-1/2">
+                        <Portfolio item={project[0]} />
+                    </div>
+                    <div className="w-full p-4 lg:w-1/2">
+                        <Portfolio item={project[1]} />
+                    </div>
+                    <div className="w-full p-4 lg:w-1/2">
+                        <Portfolio item={project[2]} />
+                    </div>
+                    <div className="w-full p-4 lg:w-1/2">
+                        <Portfolio item={project[3]} />
+                    </div>
+                </div>
+                <div className="w-full px-8 flex justify-center">
+                    <Link className="w-full text-center border bg-indigo-400 text-light py-2 px-5 text-lg font-semibold rounded-lg items-center hover:bg-indigo-600 hover:shadow-lg transition duration-300 ease-in-out" href='/projects'>View More</Link >
+
                 </div>
             </div>
         </div>

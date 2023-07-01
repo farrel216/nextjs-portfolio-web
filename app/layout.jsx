@@ -34,12 +34,9 @@ export default function RootLayout({ children }) {
       mainContent.current.scrollTop = 0;
     }
   }, [pathname])
-  useEffect(() => {
-    setDarkMode(!darkMode)
-  }, [darkMode])
   return (
     <html ref={mainContent} lang="en" className={`${merriweather.variable} font-merriweather`}>
-      <body className={`bg-light text-dark w-full `}>
+      <body className={`bg-light text-dark w-full`}>
         <header>
           <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
         </header>

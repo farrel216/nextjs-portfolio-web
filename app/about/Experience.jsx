@@ -1,8 +1,8 @@
 import React from 'react'
-import exp from '../component/Constant'
+import { exp } from '../component/Constant'
 
-const Details = ({item}) =>{
-    
+const Details = ({ item }) => {
+
     return (
 
         <div className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
@@ -20,21 +20,21 @@ const Details = ({item}) =>{
 }
 
 const Experience = () => {
-  return (
-    <div className='my-32'>
-        <h2 className="font-bold text-7xl mb-32 w-full text-center">
-            Experience
-        </h2>
-        <div className='w-[75%] mx-auto relative'>
-            <div>
-                {exp.map((item, index) => (
-                    <Details key={index} item={item} />
-                ))}
+    return (
+        <div className='my-32'>
+            <h2 className="font-bold text-7xl mb-32 w-full text-center">
+                Experience
+            </h2>
+            <div className='w-[75%] mx-auto relative'>
+                <div>
+                    {exp.map((item, index) => (
+                        <Details key={index} item={item} />
+                    ))}
+                </div>
             </div>
-        </div>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Experience

@@ -10,19 +10,19 @@ export const metadata = {
 }
 
 export default function Home() {
-  
+
   return (
-    <>
-      <PageTransition/>
+    <main>
+      <PageTransition />
       <section className='flex items-start w-full h-full bg-gradient-to-t from-indigo-200'>
-          <Hero/>
+        <Hero />
       </section>
-      <section>
-          <About/>
+      <section className='px-12'>
+        <About />
       </section>
-      <section>
-        <Project/>
+      <section className='px-12 w-full mb-20'>
+        <Project />
       </section>
-    </>
+    </main>
   )
 }

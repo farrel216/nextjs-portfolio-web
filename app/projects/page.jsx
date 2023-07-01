@@ -3,6 +3,7 @@ import React from 'react'
 
 import { project } from '../component/Constant'
 import Portfolio from "../component/Portfolio";
+import PageTransition from '../component/PageTransition';
 
 export const metadata = {
   title: 'Farrel Portfolio | Projects Page',
@@ -11,24 +12,27 @@ export const metadata = {
 
 const Projects = () => {
   return (
-    <div className='flex justify-center'>
-      <div className="container">
-        <div className="w-full px-4">
-          <div className="max-w-xl mx-auto text-center my-16">
-            <h2 className="font-bold text-3xl mb-2 text-dark text-center">Latest <span className='text-primary'>Project</span></h2>
-            <div className="mb-16">
+    <>
+      <PageTransition />
+      <div className='flex justify-center'>
+        <div className="container">
+          <div className="w-full px-4">
+            <div className="max-w-xl mx-auto text-center my-16">
+              <h2 className="font-bold text-3xl mb-2 text-dark text-center">Latest <span className='text-primary'>Project</span></h2>
+              <div className="mb-16">
+              </div>
             </div>
           </div>
-        </div>
-        <div className="w-full px-4 flex flex-wrap justify-center">
-          {project.map((item, index) => (
-            <div className="p-4 lg:w-1/2" key={`project-${index}`}>
-              <Portfolio item={item} />
-            </div>
-          ))}
+          <div className="w-full px-4 flex flex-wrap justify-center">
+            {project.map((item, index) => (
+              <div className="w-full p-4 lg:w-1/2" key={`project-${index}`}>
+                <Portfolio item={item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
