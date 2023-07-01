@@ -1,5 +1,8 @@
+'use client'
 import React from 'react'
-import ProjectComponent from './ProjectComponent'
+
+import { project } from '../component/Constant'
+import Portfolio from "../component/Portfolio";
 
 export const metadata = {
   title: 'Farrel Portfolio | Projects Page',
@@ -18,7 +21,11 @@ const Projects = () => {
           </div>
         </div>
         <div className="w-full px-4 flex flex-wrap justify-center">
-          <ProjectComponent />
+          {project.map((item, index) => (
+            <div className="p-4 lg:w-1/2" key={`project-${index}`}>
+              <Portfolio item={item} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

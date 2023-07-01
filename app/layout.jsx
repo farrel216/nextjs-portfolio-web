@@ -5,6 +5,7 @@ import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import { usePathname } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
+import { themeChange } from "theme-change";
 // const poppins = Poppins({
 //   subsets: ['latin'],
 //   variable: '--font-poppins',
@@ -29,16 +30,19 @@ export default function RootLayout({ children }) {
   const mainContent = useRef(null)
   const [darkMode, setDarkMode] = useState(true)
 
-  useEffect(()=>{
-    if(mainContent.current){
+  useEffect(() => {
+    if (mainContent.current) {
       mainContent.current.scrollTop = 0;
     }
   }, [pathname])
+  useEffect(() => {
+    setDarkMode(!darkMode)
+  }, [darkMode])
   return (
     <html ref={mainContent} lang="en" className={`${merriweather.variable} font-merriweather`}>
       <body className={`bg-light text-dark w-full `}>
         <header>
-          <Navigation darkMode={darkMode} setDarkMode={setDarkMode}/>
+          <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
         </header>
         {children}
         <footer>
