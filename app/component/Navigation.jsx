@@ -3,22 +3,22 @@ import { BsMoonFill } from "react-icons/bs";
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
-import { usePathname, useRouter} from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 const MobileLink = ({ href, title, className, toggle }) => {
   const pathname = usePathname();
   const router = useRouter()
   return (
-    <button type="button" onClick={()=>{
+    <button type="button" onClick={() => {
       toggle()
       router.push(href)
-      }} href={href} className={`${className} block relative group`}>
+    }} href={href} className={`${className} block relative group`}>
       {title}
       <span
         className={`h-0.5 inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
       ${pathname === href ? "w-full" : "w-0"}`}
-      
+
       >
         &nbsp;
       </span>
@@ -33,14 +33,14 @@ const CustomLink = ({ href, title, className }) => {
       <span
         className={`h-0.5 inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
       ${pathname === href ? "w-full" : "w-0"}`}
-      
+
       >
         &nbsp;
       </span>
     </Link>
   );
 };
-const Navigation = ({darkMode, setDarkMode}) => {
+const Navigation = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = React.useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -58,34 +58,31 @@ const Navigation = ({darkMode, setDarkMode}) => {
         onClick={handleClick}
       >
         <span
-          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            open ? `rotate-45 translate-y-1` : `-translate-y-0.5`
-          }`}
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${open ? `rotate-45 translate-y-1` : `-translate-y-0.5`
+            }`}
         ></span>
         <span
-          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            open ? `opacity-0` : `opacity-100`
-          }`}
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${open ? `opacity-0` : `opacity-100`
+            }`}
         ></span>
         <span
-          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            open ? `-rotate-45 -translate-y-1` : `translate-y-0.5`
-          }`}
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${open ? `-rotate-45 -translate-y-1` : `translate-y-0.5`
+            }`}
         ></span>
       </button>
-      {open ? 
-      <div className="min-w-[250px] text-dark bg-white shadow-lg rounded-lg backdrop-blur-md py-5 flex flex-col items-center absolute z-50 top-20 lg:hidden">
-        <nav className="flex flex-col p-5 gap-4 ">
-          <MobileLink href={'/'} title="Home" className={""} toggle={handleClick}/>
-          <MobileLink href={'/about'} title="About" className={""} toggle={handleClick}/>
-          <MobileLink href={'/projects'} title="Projects" className={""} toggle={handleClick}/>
-          <MobileLink
-            href="/contact"
-            title="Contact"
-            className={""}/>
-        </nav>
-      </div>
-      : null}
+      {open ?
+        <div className="min-w-[250px] text-dark bg-white shadow-lg rounded-lg backdrop-blur-md py-5 flex flex-col items-center absolute z-50 top-20 lg:hidden">
+          <nav className="flex flex-col p-5 gap-4 ">
+            <MobileLink href={'/'} title="Home" className={""} toggle={handleClick} />
+            <MobileLink href={'/about'} title="About" className={""} toggle={handleClick} />
+            <MobileLink href={'/projects'} title="Projects" className={""} toggle={handleClick} />
+            <MobileLink
+              href="/contact"
+              title="Contact"
+              className={""} />
+          </nav>
+        </div>
+        : null}
       <div className="flex lg:hidden">
         <Logo />
       </div>
@@ -100,11 +97,11 @@ const Navigation = ({darkMode, setDarkMode}) => {
           <CustomLink
             href="/contact"
             title="Contact"
-            className={"ml-10"}/>
+            className={"ml-10"} />
         </nav>
       </div>
-      <button onClick={setDarkMode(!darkMode)}>
-      <BsMoonFill />
+      <button>
+        <BsMoonFill />
       </button>
     </motion.div>
   );

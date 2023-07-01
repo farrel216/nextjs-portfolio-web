@@ -22,10 +22,10 @@ const Portfolio = ({ item }) => {
                     </div>
                 </div>
                 <div className="absolute left-12 -bottom-full group-hover:bottom-16 transition-all duration-700 z-50">
-                    <span className="text-lg lg:text-3xl text-light">{item.title}</span>
+                    <span className="text-lg lg:text-2xl text-light">{item.title}</span>
                 </div>
                 <div className="absolute left-12 -bottom-full group-hover:bottom-8 transition-all duration-1000 z-50">
-                    <div className="flex gap-3 items-center text-xl">
+                    <div className="flex gap-4 items-center text-xl">
                         <a className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
      absolute" href={item.github} onMouseEnter={() => { setShowGit(true) }}
                             onMouseLeave={() => { setShowGit(false) }} target='_blank' ><SiGithub /> {showGit && <span className="text-base">&nbsp;Code</span>}</a>
