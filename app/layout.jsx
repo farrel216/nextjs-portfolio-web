@@ -5,7 +5,6 @@ import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import { usePathname } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
-import { themeChange } from "theme-change";
 // const poppins = Poppins({
 //   subsets: ['latin'],
 //   variable: '--font-poppins',
