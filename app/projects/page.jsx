@@ -16,7 +16,7 @@ const Projects = () => {
         <div className="container">
           <div className="w-full px-4">
             <div className="max-w-xl mx-auto text-center my-16">
-              <h2 className="font-bold text-3xl mb-2 text-dark text-center">Latest <span className='text-primary'>Project</span></h2>
+              <h2 className="font-bold text-3xl mb-2 text-dark text-center dark:text-light">Latest <span className='text-primary'>Project</span></h2>
               <div className="mb-16">
               </div>
             </div>

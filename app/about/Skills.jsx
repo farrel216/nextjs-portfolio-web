@@ -10,7 +10,7 @@ const Skill = ({ name, x, y, children }) => {
   const [showName, setShowName] = React.useState(false)
   return (
     <motion.div className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
-    cursor-pointer absolute"
+    cursor-pointer absolute dark:bg-light dark:text-dark dark:shadow-light"
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y }}
       viewport={{ once: true }}
@@ -49,7 +49,7 @@ const Skills = () => {
       <Carousel interval={5000}>
 
         <CarouselSkill key={1}>
-          <div className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark">
+          <div className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark dark:bg-light dark:text-dark dark:shadow-light">
             Web Development
           </div>
           <Skill name="ReactJS" x="-22vw" y="2vw" >

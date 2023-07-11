@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <main>
       <PageTransition />
-      <section className='flex items-start w-full h-full bg-gradient-to-t from-indigo-200'>
+      <section className='flex items-start w-full h-full bg-gradient-to-t from-indigo-200 dark:from-indigo-800 '>
         <Hero />
       </section>
-      <section className='lg:px-12'>
+      <section className='lg:px-12 bg-gradient-to-b from-indigo-200 dark:from-indigo-800'>
         <About />
       </section>
-      <section className='lg:px-12 w-full mb-20'>
+      <section className='lg:px-12 lg:pb-20 bg-gradient-to-t from-indigo-200 dark:from-indigo-800 w-full'>
         <Project />
       </section>
     </main>

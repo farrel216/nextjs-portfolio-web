@@ -18,7 +18,7 @@ const Details = ({ item }) => {
                 <h3 className='capitalize font-bold text-2xl'>
                     {item.position}, <span className='font-normal italic text-xl'>@{item.company}</span>
                 </h3>
-                <span className='font-medium text-dark/70'>{item.time} | {item.address}</span>
+                <span className='font-medium text-dark/70 dark:text-light/70'>{item.time} | {item.address}</span>
                 <p className='w-full text-justify'>
                     {item.description}
                 </p>
@@ -41,7 +41,7 @@ const Experience = () => {
                 Experience
             </h2>
             <div ref={ref} className='w-full lg:w-[75%] mx-auto relative'>
-                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' />
+                <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light' />
                 <div>
                     {exp.map((item, index) => (
                         <Details key={index} item={item} />

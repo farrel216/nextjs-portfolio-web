@@ -1,8 +1,9 @@
 'use client'
-import { BsMoonFill } from "react-icons/bs";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -40,7 +41,8 @@ const CustomLink = ({ href, title, className }) => {
     </Link>
   );
 };
-const Navigation = ({ darkMode, setDarkMode }) => {
+const Navigation = () => {
+  const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = React.useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -51,7 +53,7 @@ const Navigation = ({ darkMode, setDarkMode }) => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="w-full py-8 px-3 lg:px-32 font-medium flex items-center justify-between bg-slate-50 border-b-4 border-slate-200"
+      className="w-full py-8 px-3 lg:px-32 font-medium flex items-center justify-between bg-white border-b-4 dark:bg-dark"
     >
       <button
         className="flex flex-col justify-center items-center lg:invisible"
@@ -100,8 +102,11 @@ const Navigation = ({ darkMode, setDarkMode }) => {
             className={"ml-10"} />
         </nav>
       </div>
-      <button>
-        <BsMoonFill />
+      <button onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+        {mode === "dark" ?
+          <BsSunFill className="fill-dark dark:fill-white" /> :
+          <BsMoonFill className="fill-dark dark:fill-white" />
+        }
       </button>
     </motion.div>
   );

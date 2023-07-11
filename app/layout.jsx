@@ -36,9 +36,9 @@ export default function RootLayout({ children }) {
   }, [pathname])
   return (
     <html ref={mainContent} lang="en" className={`${merriweather.variable} font-merriweather`}>
-      <body className={`bg-light text-dark w-full`}>
+      <body className={`bg-light text-dark w-full dark:bg-dark dark:text-light`}>
         <header>
-          <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Navigation />
         </header>
         {children}
         <footer>

@@ -22,7 +22,7 @@ const About = () => {
   }, [control, isInView])
 
   return (
-    <div className="pt-5 pb-20 px-10">
+    <div className="pt-5 px-10">
       <div className="container lg:mx-auto lg:py-20 gap-20 flex flex-col lg:flex-row">
         {/* left */}
         <motion.div ref={ref} className={`${pathname === '/about' ? 'flex' : 'hidden'} lg:flex`}
