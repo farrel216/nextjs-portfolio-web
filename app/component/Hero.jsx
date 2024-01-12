@@ -50,10 +50,10 @@ const Hero = () => {
             transition={{ duration: 1.1 }}
             className="text-lg text-dark lg:text-2xl dark:text-light"
           >
-            Hello, <span>I&apos;m</span>
-            <span className="block mt-2 text-4xl font-dark lg:text-5xl 2xl:text-6xl dark:text-light">
-              Farrel Andhika
-            </span>
+            Hello! <span className="animate-wave">👋</span>
+            <p className="block mt-2 text-4xl font-dark lg:text-5xl 2xl:text-6xl dark:text-light">
+              I&apos;m <span className="text-indigo-800">Farrel Andhika</span>
+            </p>
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -61,7 +61,7 @@ const Hero = () => {
             transition={{ duration: 1.2 }}
             className="text-md py-5 text-slate-500 lg:text-lg 2xl:text-xl dark:text-slate-100"
           >
-            3rd Year Informatics Students at Diponegoro University
+            4th Year Informatics Students at Diponegoro University
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 50 }}

@@ -26,12 +26,11 @@ const Portfolio = ({ item }) => {
                 </div>
                 <div className="absolute left-12 -bottom-full group-hover:bottom-8 transition-all duration-1000 z-50">
                     <div className="flex gap-4 items-center text-xl">
-                        <a className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
+                        {item.github ? <a className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
      absolute" href={item.github} onMouseEnter={() => { setShowGit(true) }}
-                            onMouseLeave={() => { setShowGit(false) }} target='_blank' ><SiGithub /> {showGit && <span className="text-base">&nbsp;Code</span>}</a>
-                        {item.demo && <a className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
-     absolute left-28" target='_blank' href={item.demo} onMouseEnter={() => { setShowDemo(true) }}
-                            onMouseLeave={() => { setShowDemo(false) }}><AiFillRocket />{showDemo && <span className="text-base">&nbsp;Demo</span>}</a>}
+                            onMouseLeave={() => { setShowGit(false) }} target='_blank' ><SiGithub /> {showGit && <span className="text-base">&nbsp;Code</span>}</a> : null}
+                        {item.demo ? <a className={`flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark absolute ${item.github ? "left-28" : null}`} target='_blank' href={item.demo} onMouseEnter={() => { setShowDemo(true) }}
+                            onMouseLeave={() => { setShowDemo(false) }}><AiFillRocket />{showDemo && <span className="text-base">&nbsp;Demo</span>}</a> : null}
 
                     </div>
                 </div>

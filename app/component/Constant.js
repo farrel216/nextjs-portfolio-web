@@ -3,6 +3,14 @@ import icon from "./Icon";
 
 const exp = [
   {
+    position: "Full Stack Developer",
+    company: "Ministry of Education, Culture and Research",
+    time: `Aug '23 - Des '23`,
+    address: "Jakarta, Indonesia",
+    description: `Developed a dashboard feature on the resource directorate web
+    and create a REST API that provide API to integrate cloud database and ditdaya dashboard with JWT authentication.`,
+  },
+  {
     position: "Computer Network Laboratory Assistant",
     company: "Diponegoro University",
     time: `Feb '23 - May '23`,
@@ -27,6 +35,13 @@ const exp = [
 ];
 
 const project = [
+  {
+    title: "Dashboard Ditdaya Kemdikbud",
+    img: image.dashboard,
+    alt: "Website E-Commerce",
+    tech: [icon.laravel, icon.grafana, icon.postgre],
+    demo: "https://ditdaya.kemdikbud.go.id/dashboard-sumberdaya",
+  },
   {
     title: "E-Commerce Website",
     img: image.ecomm,

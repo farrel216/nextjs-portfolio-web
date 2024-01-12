@@ -17,10 +17,10 @@ export default function Home() {
       <section className='flex items-start w-full h-full bg-gradient-to-t from-indigo-200 dark:from-indigo-800 '>
         <Hero />
       </section>
-      <section className='lg:px-12 bg-gradient-to-b from-indigo-200 dark:from-indigo-800'>
+      <section className='lg:px-12'>
         <About />
       </section>
-      <section className='lg:px-12 lg:pb-20 bg-gradient-to-t from-indigo-200 dark:from-indigo-800 w-full'>
+      <section className='lg:px-12 lg:pb-20 w-full'>
         <Project />
       </section>
     </main>
