@@ -7,6 +7,8 @@ import truk from "./portfolio/portfolio-truk.png";
 import koperasi from "./portfolio/portfolio-koperasi.png";
 import klasifikasi from "./portfolio/portfolio-klasifikasi.png";
 import ikn from "./portfolio/portfolio-ikn.png";
+import ktp from "./portfolio/portfolio-ktp-cnn.png";
+import docusign from "./portfolio/portfolio-docusign.png";
 
 export {
   dashboard,
@@ -18,4 +20,6 @@ export {
   koperasi,
   klasifikasi,
   ikn,
+  ktp,
+  docusign
 };

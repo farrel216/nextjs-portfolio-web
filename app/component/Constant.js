@@ -3,6 +3,13 @@ import icon from "./Icon";
 
 const exp = [
   {
+    position: "Software Developer Intern",
+    company: "Randstack Innovation Lab",
+    time: `Feb '24 - Present`,
+    address: "Jakarta, Indonesia",
+    description: `Working as a Backend Developer`,
+  },
+  {
     position: "Full Stack Developer",
     company: "Ministry of Education, Culture and Research",
     time: `Aug '23 - Des '23`,
@@ -36,9 +43,22 @@ const exp = [
 
 const project = [
   {
+    title: "API Docusign Integration",
+    img: image.docusign,
+    alt: "Docusign API Integration",
+    tech: [icon.express, icon.react, icon.docusign],
+  },
+  {
+    title: "KTP Image Detection",
+    img: image.ktp,
+    alt: "CNN KTP Image Detection",
+    tech: [icon.python],
+    demo: "https://colab.research.google.com/drive/1h6hkDPyvdFPy8tNxMd4WpWab9amCzN4X",
+  },
+  {
     title: "Dashboard Ditdaya Kemdikbud",
     img: image.dashboard,
-    alt: "Website E-Commerce",
+    alt: "Dashboard Ditdaya Kemdikbud",
     tech: [icon.laravel, icon.grafana, icon.postgre],
     demo: "https://ditdaya.kemdikbud.go.id/dashboard-sumberdaya",
   },

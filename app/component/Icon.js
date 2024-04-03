@@ -1,3 +1,4 @@
+
 const icon = {
   bootstrap: {
     src: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
@@ -56,6 +57,10 @@ const icon = {
   postgre: {
     src: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
     alt: "PostgreSQL",
+  },
+  docusign: {
+    src: "https://cdn.worldvectorlogo.com/logos/docusign.svg",
+    alt: "Docusign",
   },
 };
 
