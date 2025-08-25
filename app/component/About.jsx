@@ -54,7 +54,7 @@ const About = () => {
             transition={{ duration: 0.9 }}
             className="text-gray-400 text-justify lg:text-">
             Hello there! I&apos;m Farrel Andhika, a dedicated and enthusiastic
-            4th year Computer Science student at Diponegoro University. With a
+            Computer Science Graduate at Diponegoro University. With a
             strong interest in software development and IT operations, I am on a
             journey to explore the dynamic and ever-evolving world of
             technology.
