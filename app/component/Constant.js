@@ -3,9 +3,16 @@ import icon from "./Icon";
 
 const exp = [
   {
-    position: "Software Developer Intern",
+    position: "IT Infrastructure Automation",
+    company: "PT Bank CIMB Niaga Tbk.",
+    time: `Oct '24 - Present`,
+    address: "Tangerang Selatan, Indonesia",
+    description: `Infrastructure as a Code Developer`,
+  },
+  {
+    position: "Software Developer",
     company: "Randstack Innovation Lab",
-    time: `Feb '24 - Present`,
+    time: `Feb '24 - Dec '24`,
     address: "Jakarta, Indonesia",
     description: `Working as a Backend Developer`,
   },
