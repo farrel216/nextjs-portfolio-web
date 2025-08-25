@@ -61,7 +61,7 @@ const Hero = () => {
             transition={{ duration: 1.2 }}
             className="text-md py-5 text-slate-500 lg:text-lg 2xl:text-xl dark:text-slate-100"
           >
-            4th Year Informatics Students at Diponegoro University
+            Bachelor of Computer at Diponegoro University
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
